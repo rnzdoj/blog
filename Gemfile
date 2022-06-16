@@ -8,17 +8,20 @@ ruby '3.0.3'
 gem 'rails', '~> 7.0.3'
 
 gem 'bootsnap', require: false
-gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'redis', '~> 4.0'
-gem 'sprockets-rails'
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
-  gem 'rubocop', require: false
+  gem 'faker'
+  gem 'pry'
+  gem 'rails_best_practices'
+  gem 'rspec-rails'
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
+  gem 'rubocop-rake'
+  gem 'rubocop-rspec'
 end
 
-group :development do
-end
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
