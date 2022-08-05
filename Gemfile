@@ -25,3 +25,5 @@ group :development, :test do
   gem 'rubocop-rake'
   gem 'rubocop-rspec'
 end
+
+gem 'devise', '~> 4.8'
