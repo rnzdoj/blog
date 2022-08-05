@@ -19,6 +19,7 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails', '~> 5.1'
   gem 'rubocop'
+  gem 'rubocop-discourse'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rake'
