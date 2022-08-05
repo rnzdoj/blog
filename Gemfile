@@ -15,13 +15,11 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 
 group :development, :test do
+  gem 'bundler-audit', '~> 0.9.1'
   gem 'pry'
   gem 'rubocop'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rake'
   gem 'rubocop-rspec'
-end
-
-group :development do
 end
