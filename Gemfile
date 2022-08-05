@@ -14,6 +14,7 @@ gem 'sprockets-rails', require: 'sprockets/railtie'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
+  gem 'brakeman'
   gem 'bundler-audit', '~> 0.9.1'
   gem 'pry'
   gem 'rspec-rails', '~> 5.1'
