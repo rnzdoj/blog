@@ -1,4 +1,8 @@
 AllCops:
-  NewCops: enable
   Exclude:
     - bin/**/*
+    - tmp/**/*
+    - vendor/**/*
+  NewCops: enable
+Security/CompoundHash: # new in 1.28
+  Enabled: true
