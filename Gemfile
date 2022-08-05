@@ -23,3 +23,5 @@ group :development, :test do
   gem 'rubocop-rake'
   gem 'rubocop-rspec'
 end
+
+gem 'brakeman', '~> 5.2'
