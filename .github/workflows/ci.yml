@@ -2,7 +2,7 @@ name: "CI"
 on:
   pull_request
 jobs:
-  test:
+  test-lint:
     runs-on: ubuntu-latest
     services:
       postgres:
