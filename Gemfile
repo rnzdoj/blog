@@ -27,3 +27,5 @@ group :development, :test do
 end
 
 gem 'devise', '~> 4.8'
+
+gem 'graphql', '~> 2.0'
