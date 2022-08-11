@@ -25,7 +25,7 @@ class GraphqlController < ApplicationController
   private
 
   # Handle variables in form data, JSON body, or a blank value
-  def prepare_variables(variables_param)
+  def prepare_variables(variables_param) # rubocop: disable Metrics/MethodLength, Style/CommentedKeyword
     case variables_param
     when String
       if variables_param.present?
@@ -44,7 +44,7 @@ class GraphqlController < ApplicationController
     end
   end
 
-  def handle_error_in_development(e)
+  def handle_error_in_development(e) # rubocop: disable Naming/MethodParameterName, Style/CommentedKeyword
     logger.error e.message
     logger.error e.backtrace.join("\n")
 

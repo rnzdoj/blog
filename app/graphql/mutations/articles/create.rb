@@ -10,8 +10,6 @@ module Articles
 
     argument :arguments, CreateArticleAttributes, required: true
 
-    def resolve(arguments:)
-
-    end
+    def resolve(arguments:); end
   end
 end
