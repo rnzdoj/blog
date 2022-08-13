@@ -30,3 +30,5 @@ gem 'devise', '~> 4.8'
 
 gem 'graphiql-rails', group: :development
 gem 'graphql', '~> 2.0'
+
+gem 'timecop', '~> 0.9.5'

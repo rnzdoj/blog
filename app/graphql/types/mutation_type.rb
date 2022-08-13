@@ -2,6 +2,6 @@
 
 module Types
   class MutationType < Types::BaseObject
-    field :create_article, mutation: Articles::Create
+    field :create_articles, mutation: Mutations::Articles::Create
   end
 end
