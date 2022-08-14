@@ -16,6 +16,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 group :development, :test do
   gem 'brakeman'
   gem 'bundler-audit', '~> 0.9.1'
+  gem 'graphiql-rails'
   gem 'pry'
   gem 'rspec-rails', '~> 5.1'
   gem 'rubocop'
@@ -24,11 +25,9 @@ group :development, :test do
   gem 'rubocop-rails'
   gem 'rubocop-rake'
   gem 'rubocop-rspec'
+  gem 'timecop', '~> 0.9.5'
 end
 
 gem 'devise', '~> 4.8'
-
-gem 'graphiql-rails', group: :development
+gem 'dotenv-rails'
 gem 'graphql', '~> 2.0'
-
-gem 'timecop', '~> 0.9.5'
