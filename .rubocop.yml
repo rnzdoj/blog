@@ -6,3 +6,5 @@ AllCops:
   NewCops: enable
 Security/CompoundHash: # new in 1.28
   Enabled: true
+Style/Documentation:
+  Enabled: false
