@@ -32,5 +32,6 @@ end
 gem 'devise', '~> 4.8'
 gem 'dotenv-rails'
 gem 'graphql', '~> 2.0'
+gem 'rack-cors'
 gem 'rswag-api'
 gem 'rswag-ui'
