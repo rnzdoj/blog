@@ -13,9 +13,10 @@ RSpec.describe Mutations::Articles::Create do
     }
   end
 
-  it 'is expected to' do
-    response = formatted_response(query, key: :createArticle, variables: variables)
+  it 'must create the article' do
+    response, errors = formatted_response(query, key: :createArticle, variables: variables)
 
+    expect(errors).to be_nil
     expect(response[:body]).to eq('test')
   end
 
