@@ -37,4 +37,5 @@
 /.keep
 /.env
 /*schema.*
+/schema.json
 

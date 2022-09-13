@@ -388,7 +388,7 @@
           "fields": [
             {
               "name": "articles",
-              "description": null,
+              "description": "query a list of articles",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,
