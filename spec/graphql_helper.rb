@@ -10,8 +10,8 @@ def execute(query, context: nil, variables: nil, current_user: nil)
   )
 end
 
-def formatted_response(query, key: nil, context: nil, variables: nil)
-  response = execute(query, context: context, variables: variables)
+def formatted_response(query, key: nil, context: nil, variables: nil, current_user: nil)
+  response = execute(query, context: context, variables: variables, current_user: current_user)
 
   key.nil? ? response[:data] : response[:data][key]
 end

@@ -3,11 +3,12 @@
 require 'rails_helper'
 
 RSpec.describe Resolvers::ArticlesResolver do
-  let_it_be(:article_a) { create(:article) }
+  let_it_be(:user) { create(:user) }
+  let_it_be(:article_a) { create(:article, user_id: user.id) }
   let(:variables) { { first: 10 } }
 
   it 'must return list of articles' do
-    response, errors = paginated_collection('articles', query, variables: variables)
+    response, errors = paginated_collection('articles', query, variables: variables, current_user: user)
 
     expect(errors).to be_nil
     expect(response.count).to eq(1)

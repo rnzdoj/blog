@@ -3,6 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe Mutations::Articles::Create do
+  let!(:user) { create(:user) }
   let(:variables) do
     {
       input: {
@@ -14,7 +15,7 @@ RSpec.describe Mutations::Articles::Create do
   end
 
   it 'must create the article' do
-    response, errors = formatted_response(query, key: :createArticle, variables: variables)
+    response, errors = formatted_response(query, key: :createArticle, variables: variables, current_user: user)
 
     expect(errors).to be_nil
     expect(response[:body]).to eq('test')
