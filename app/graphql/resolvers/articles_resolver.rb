@@ -5,8 +5,8 @@ module Resolvers
     graphql_name 'Articles'
     description 'query a list of articles'
 
-    scope { current_user&.articles }
+    scope { current_user&.articles  }
 
-    type Types::ArticleType.connection_type, null: false
+    type Types::ArticleType.connection_type, null: true
   end
 end
