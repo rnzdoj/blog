@@ -14,7 +14,7 @@ module Mutations
       type Types::ArticleType
 
       def resolve(attributes:)
-        ::Articles::Creator.call(params: attributes.to_h)
+        ::Articles::Creator.call(params: attributes.to_h, current_user: current_user)
       end
     end
   end

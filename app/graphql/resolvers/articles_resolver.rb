@@ -1,13 +1,12 @@
 # frozen_string_literal: true
 
 module Resolvers
-  class ArticlesResolver < Resolvers::Base
+  class ArticlesResolver < SearchObjectBase
     graphql_name 'Articles'
+    description 'query a list of articles'
 
-    type [Types::ArticleType], null: false
+    scope { current_user&.articles  }
 
-    def resolve
-      Article.all
-    end
+    type Types::ArticleType.connection_type, null: true
   end
 end

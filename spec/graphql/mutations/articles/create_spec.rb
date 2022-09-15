@@ -3,24 +3,32 @@
 require 'rails_helper'
 
 RSpec.describe Mutations::Articles::Create do
-  it 'is expected to' do
-    response = formatted_response(query, key: :createComment)
+  let!(:user) { create(:user) }
+  let(:variables) do
+    {
+      input: {
+        attributes: {
+          body: 'test'
+        }
+      }
+    }
+  end
 
+  it 'must create the article' do
+    response, errors = formatted_response(query, key: :createArticle, variables: variables, current_user: user)
+
+    expect(errors).to be_nil
     expect(response[:body]).to eq('test')
   end
 
   def query
     <<~GQL
-      mutation {
-         createComment(input: {
-           attributes: {
-            body: "test"
-           }
-         }) {
-           id
-           body
-         }
-       }
+      mutation createArticle ($input: CreateArticleInput!) {
+        createArticle (input: $input) {
+          body
+          id
+        }
+      }
     GQL
   end
 end

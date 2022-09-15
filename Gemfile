@@ -16,6 +16,8 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 group :development, :test do
   gem 'brakeman'
   gem 'bundler-audit', '~> 0.9.1'
+  gem 'factory_bot_rails'
+  gem 'faker'
   gem 'graphiql-rails'
   gem 'pry'
   gem 'rspec-rails', '~> 5.1'
@@ -26,6 +28,7 @@ group :development, :test do
   gem 'rubocop-rails'
   gem 'rubocop-rake'
   gem 'rubocop-rspec'
+  gem 'test-prof', '~> 1.0'
   gem 'timecop', '~> 0.9.5'
 end
 
@@ -35,3 +38,5 @@ gem 'graphql', '~> 2.0'
 gem 'rack-cors'
 gem 'rswag-api'
 gem 'rswag-ui'
+gem 'search_object'
+gem 'search_object_graphql'

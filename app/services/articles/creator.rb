@@ -5,7 +5,7 @@ module Articles
     def call
       return if params.blank?
 
-      Article.create!(params)
+      current_user.articles.create!(params)
     end
   end
 end

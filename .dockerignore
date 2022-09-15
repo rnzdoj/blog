@@ -1,0 +1,39 @@
+.git
+.gitignore
+docker-compose.*
+.git-config/*
+.githooks/*
+*.md
+lib/rubocop/*
+
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+# Ignore uploaded files.
+/storage/*
+!/storage/.keep
+.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+/.idea/*
+/.env
+/coverage/*
+/public/
+/vendor/
+/spec/failed_specs.txt
+todo.txt
+schema.*
+note.txt
+swagger/
