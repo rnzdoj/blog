@@ -11,7 +11,7 @@ class ApplicationController < ActionController::API
     if resource.is_a?(Hash) then super
     elsif resource.errors.present? then render json: error_message, status: :unprocessable_entity
     else
-      render json: user_params(resource)
+      render json: resource
     end
   end
 
